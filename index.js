@@ -44,6 +44,10 @@ let comments = [
     }
 ];
 
+app.get('/', (req, res) => {
+    res.redirect('/comments');
+})
+
 // GET /comments - list all comments
 // POST /comments - Create a new comment 
 // GET /comments/:id - Get one comment (using ID)
