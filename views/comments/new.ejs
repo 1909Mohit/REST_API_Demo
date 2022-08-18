@@ -1,0 +1,22 @@
+<%-include('partials/header') %> 
+    <title>New - Comment!</title>
+</head>
+<body>
+    <%-include('partials/navbar') %> 
+    <div class="container my-3">
+    <h1>Create new comment </h1>
+    <form action="/comments" method="post">
+        <section>
+        <label class="form-label" for="username"><b>Username</b> : </label>
+        <input class="form-control" type="text" name="username" id="username" placeholder="Enter username">
+    </section>
+    <section>
+        <label class="form-label" for="comment"><b>Comment Text </b>: </label> <br>
+        <textarea class="form-control" placeholder="Comment here!" name="comment" id="comment" cols="30" rows="5"></textarea>
+    </section>
+<div class="d-grid">
+    <button class="btn btn-success btn my-3 ">Create</button>
+</div>
+    </form>
+</div>
+    <%-include('partials/footer') %> 

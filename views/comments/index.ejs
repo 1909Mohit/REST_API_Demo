@@ -1,0 +1,17 @@
+<%-include('partials/header') %> 
+    <title>All Comments</title>
+</head>
+<body>
+    <%-include('partials/navbar') %> 
+    <div class="container my-3">
+        <h1>Index - All Comments</h1>
+        <ul>
+            <% for(let comment of comments){%>
+                <li class="my-2">
+                <%=comment.comment %> - <strong><%=comment.username %></strong>
+                <a  class="btn btn-outline-info btn-sm mx-3" href="/comments/<%=comment.id %> ">details</a>
+            </li>
+            <% } %>  
+        </ul>
+  </div>
+    <%-include('partials/footer') %> 

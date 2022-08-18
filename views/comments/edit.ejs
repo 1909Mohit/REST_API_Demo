@@ -1,0 +1,18 @@
+<%-include('partials/header') %>
+    <title>New - Comment!</title>
+    </head>
+
+    <body>
+        <%-include('partials/navbar') %>
+            <div class="container my-3">
+                <h1>Edit comment </h1>
+                <form action="/comments/<%=comment.id%>?_method=PATCH" method="POST">
+                    <label class="form-label" for="comment"><b>Comment Text </b>: </label> <br>
+                    <textarea class="form-control" name="comment" id="comment" cols="30" rows="5"><%=comment.comment %></textarea> <br>
+                    <div class="d-grid">
+                    <button class="btn btn-info btn-sm">Update</button>
+                </div>
+                </form>
+            </div>
+
+<%-include('partials/footer') %>
